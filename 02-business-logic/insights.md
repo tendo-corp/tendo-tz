@@ -2,7 +2,7 @@
 
 Домен, который связывает ИИ-модуль с тендерами: собирает снимок сравнительной таблицы, ставит и ведёт прогоны разбора тендера и пары финалистов, хранит результаты и признаки их актуальности, отвечает на вопросы по таблице и ведёт ветки разговора, готовит черновики писем поставщикам, предлагает и применяет сопоставление строк КП с ведомостью; плюс прежняя сводка и сценарии разбора на правилах. Как устроены сами пайплайны, сверка чисел, деградация и биллинг ИИ — в [../06-ai/ai-features.md](../06-ai/ai-features.md).
 
-Связанные разделы: метрики СТ — [tenders-comparison.md](tenders-comparison.md); раунды — [tenders-rounds.md](tenders-rounds.md); КП и корректировки — [tenders-quotes.md](tenders-quotes.md); биллинг — [billing.md](billing.md); данные — [../05-data-model/tables.md](../05-data-model/tables.md#ai_analysis_results); API — [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md) (раздел ИИ-разбора, пути §13) и [../04-api/endpoints-quotes.md](../04-api/endpoints-quotes.md#get-quotesquote_idmatching); экраны — [../03-screens/tender-card-analysis.md](../03-screens/tender-card-analysis.md), [../03-screens/tender-card.md](../03-screens/tender-card.md); открытые вопросы — [../_oq/AI.md](../_oq/AI.md).
+Связанные разделы: метрики СТ — [tenders-comparison.md](tenders-comparison.md); раунды — [tenders-rounds.md](tenders-rounds.md); КП и корректировки — [tenders-quotes.md](tenders-quotes.md); биллинг — [billing.md](billing.md); данные — [../05-data-model/tables.md](../05-data-model/tables.md#ai_analysis_results); API — [../04-api/endpoints-tenders-analysis.md](../04-api/endpoints-tenders-analysis.md) (пути — §13) и [../04-api/endpoints-quotes.md](../04-api/endpoints-quotes.md#get-quotesquote_idmatching); экраны — [../03-screens/tender-card-analysis.md](../03-screens/tender-card-analysis.md), [../03-screens/tender-card.md](../03-screens/tender-card.md); открытые вопросы — [../_oq/AI.md](../_oq/AI.md).
 
 Оценка: **L** (без самих пайплайнов, которые оценены в разделе ИИ; разбивка — §12).
 
@@ -340,7 +340,7 @@ stale_reason = «После разбора поставщик прислал н�
 
 ## 13. Связанные разделы
 
-- **API** (тег `tenders`, файл [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md), раздел ИИ-разбора):
+- **API** (тег `tenders`, [../04-api/endpoints-tenders-analysis.md](../04-api/endpoints-tenders-analysis.md); оглавление раздела тендеров — [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md)):
 
 | Метод | Путь | Назначение |
 |---|---|---|
