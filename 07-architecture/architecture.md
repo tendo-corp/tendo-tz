@@ -265,7 +265,7 @@ stateDiagram-v2
   [*] --> queued: create_job
   queued --> running: захват SKIP LOCKED, attempts+1
   running --> done: обработчик успешен
-  running --> queued: повторяемая ошибка и attempts < max, пауза 30·2^(n-1) с
+  running --> queued: повторяемая ошибка, попытки остались, пауза 30·2^(n-1) с
   running --> failed: ошибка, попытки исчерпаны или неповторяемая
   running --> failed: сторож, running дольше 600 с
   running --> queued: рестарт процесса, есть попытки и входной файл
