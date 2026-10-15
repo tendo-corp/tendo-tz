@@ -345,7 +345,7 @@ sequenceDiagram
 | Поле | Тип | Смысл |
 |---|---|---|
 | `ok`, `file_name` | | |
-| `matched[]` | array | `{row, tender_item_id, code, name, materials_price, works_price, note, matched_by ("code"/"name"), derived}` — `derived`: цена за единицу выведена из суммы и объёма |
+| `matched[]` | array | `{row, tender_item_id, code, name, materials_price, works_price, note, matched_by ("code"/"name"), derived}` — `derived`: `null`, если ставки взяты из файла как есть, иначе способ восстановления ставки: `from_line_sum` — ставки материалов/работ из сумм строки ÷ объём; `unit_total_only` — общая ставка за единицу записана в работы; `from_line_total` — общая сумма строки ÷ объём записана в работы |
 | `unparsed[]` | array | `{row, tender_item_id|null, code, name, reason}` — строка адресована позиции, но цену не взять (например, «Цены за единицу не заполнены») или позиция неоднозначна |
 | `extra_rows[]` | array | строки, которых нет в тендере: `{row, code, name, unit, quantity, section_id, note, materials_price, works_price}` |
 | `missing_items[]` | array | позиции тендера, которых нет в файле: `{tender_item_id, name, code}` |
@@ -371,7 +371,7 @@ sequenceDiagram
 | 413 | > 50 МБ | «Файл слишком большой (максимум 50 МБ). Разбейте таблицу или удалите лишние листы.» |
 | 403 / 410 | токен, отзыв, приостановка | общие |
 
-**Пример.** → `{"ok": true, "file_name": "КП Альфа.xlsx", "matched": [{"row": 14, "tender_item_id": 2504, "code": "1.1", "name": "Профильная система", "materials_price": 15520, "works_price": 17000, "note": null, "matched_by": "code", "derived": false}], "unparsed": [], "extra_rows": [{"row": 95, "code": null, "name": "Доп. крепёж", "unit": "шт", "quantity": 10, "materials_price": 150, "works_price": null}], "missing_items": [], "volume_changes": [], "structure_errors": [{"row": 95, "where": "строки 95", "message": "В файле есть строки, которых нет в форме ФКП: 1. Добавлять и менять строки нельзя — заполняйте только жёлтые ячейки скачанного шаблона."}], "conditions": [{"condition_field_id": 128, "label": "Условия оплаты (авансирование)", "value": "30%", "row": 120}], "unmatched_conditions": [], "price_columns": {"materials": 5, "works": 6, "by_order": false, "detail": []}, "meta": {"sheet_name": "ФКП", "rows_scanned": 106, "tender_items": 90, "priced_items": 89, "derived_items": 0}}`
+**Пример.** → `{"ok": true, "file_name": "КП Альфа.xlsx", "matched": [{"row": 14, "tender_item_id": 2504, "code": "1.1", "name": "Профильная система", "materials_price": 15520, "works_price": 17000, "note": null, "matched_by": "code", "derived": null}], "unparsed": [], "extra_rows": [{"row": 95, "code": null, "name": "Доп. крепёж", "unit": "шт", "quantity": 10, "materials_price": 150, "works_price": null}], "missing_items": [], "volume_changes": [], "structure_errors": [{"row": 95, "where": "строки 95", "message": "В файле есть строки, которых нет в форме ФКП: 1. Добавлять и менять строки нельзя — заполняйте только жёлтые ячейки скачанного шаблона."}], "conditions": [{"condition_field_id": 128, "label": "Условия оплаты (авансирование)", "value": "30%", "row": 120}], "unmatched_conditions": [], "price_columns": {"materials": 5, "works": 6, "by_order": false, "detail": []}, "meta": {"sheet_name": "ФКП", "rows_scanned": 106, "tender_items": 90, "priced_items": 89, "derived_items": 0}}`
 
 **Побочные эффекты.** Нет (файл не сохраняется).
 

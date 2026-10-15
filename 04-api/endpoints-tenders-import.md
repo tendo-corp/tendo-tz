@@ -115,7 +115,7 @@ sequenceDiagram
 | `column_map` | object \| null | распознанная карта колонок: `header_row`, `data_start_row`, индексы ролей (`number`, `budget_code`, `name`, `mark`, `equipment_code`, `manufacturer`, `unit`, `qty`), `price_start_col`, `columns[]` (`col`, `header`, `sample`, `role`, `role_label`, `zone` = `structure`/`price`, `include`, `required`), `ignored_price_headers`, `unknown_before_price` |
 | `parse_meta` | object | `mode` (режим разбора), `sheet_name`, `sheet_index`, `conditions_source` (`footer`/`sheet`/`mixed`) |
 | `parse_warnings` | string[] | предупреждения для показа (например, «ИИ-доразбор выключен — принята структура как есть. Проверьте разделы.») |
-| `parsed_by` | string | `heuristic` или `llm` |
+| `parsed_by` | string | `heuristic` — разобрано правилами; `ai` — правила не нашли позиций и структуру собрала модель; `heuristic+llm_repair` — зарезервировано под ремонт иерархии моделью (в текущей реализации не используется) |
 | `skipped_totals` / `skipped_totals_detail` | string[] / `{row, kind, label}[]` | строки итогов и НДС, исключённые из позиций (`kind`: `grand_total`, `vat`, …) |
 | `formula_check` | object \| null | сверка итогов файла с деревом (контрольные суммы) |
 | `document` | object \| null | реквизиты документа из шапки (если найдены) |

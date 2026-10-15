@@ -81,6 +81,7 @@ MoSCoW: **Must** — без этого продукт не решает зада
 | ИИ-сопоставление позиций | `AI_PIPELINES__POSITION_MATCHING` (выключено по умолчанию: точность не измерена) | [ai-features](../06-ai/ai-features.md) |
 | Передача журнала ИБ во внешнюю SIEM | `VITE_ENABLE_SIEM_TRANSFER` (скрыта в интерфейсе) | [security](../02-business-logic/security.md) |
 | Пересылка технических логов во внешний приёмник, алерты в мессенджер | `LOG_FORWARD_*`, `ALERTS_ENABLED` | [nonfunctional](../07-architecture/nonfunctional.md) |
+| Автопроверки контрагента по открытым реестрам (ЕГРЮЛ, РНП; СРО, арбитраж и банкротства — ссылки для ручной проверки) и «Заполнить по ИНН» | источник данных согласовать с Заказчиком | [suppliers](../02-business-logic/suppliers.md) |
 | Антивирусная проверка вложений | `VIRUS_SCANNER=clamav` | [files](../02-business-logic/files.md) |
 | Передача обращений об ошибках во внешний трекер | `BUGREPORT_GITHUB_ENABLED` | [bug-reports](../02-business-logic/bug-reports.md) |
 | Демо-инструменты: демо-учётки на входе, демо-хаб, стенд плотной матрицы, пример файла, «заполнить за меня» | `VITE_DEMO_TOOLS` | [demo](../03-screens/demo.md), [tender-dense-gate](../03-screens/tender-dense-gate.md) |
