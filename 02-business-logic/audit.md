@@ -225,6 +225,6 @@ stateDiagram-v2
 ## 13. Связанные разделы
 
 - API: [../04-api/endpoints-security.md](../04-api/endpoints-security.md) (журнал, инциденты, правила), [../04-api/endpoints-identity.md](../04-api/endpoints-identity.md) (`GET /users/{id}/events`, `GET /permissions/changes`).
-- Экраны: журнал безопасности — см. раздел экранов ИБ; карточка пользователя, вкладка «История» — [../03-screens/users.md](../03-screens/users.md); блок изменений прав — [../03-screens/settings.md](../03-screens/settings.md).
+- Экраны: журнал безопасности — [../03-screens/security-log.md](../03-screens/security-log.md); карточка пользователя, вкладка «История» — [../03-screens/users.md](../03-screens/users.md); блок изменений прав — [../03-screens/settings.md](../03-screens/settings.md).
 - Таблицы: [security_audit_log](../05-data-model/tables.md#security_audit_log), [security_incident_rules](../05-data-model/tables.md#security_incident_rules), [security_incidents](../05-data-model/tables.md#security_incidents).
 - Открытые вопросы — `../_oq/BL-1.md`.
