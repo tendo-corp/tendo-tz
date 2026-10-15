@@ -79,16 +79,16 @@ sequenceDiagram
     end
     API->>DB: auth_sessions (хеш refresh, сроки)
     API-->>B: 200 {mfa_required:false} + Set-Cookie tendo_at, tendo_rt
-    B->>API: GET /tenders (cookie tendo_at)
+    B->>API: GET /portfolios (cookie tendo_at)
     API->>DB: sid жив? пользователь активен? pv совпал?
     API-->>B: 200
     Note over B,API: через 15 мин JWT истёк
-    B->>API: GET /tenders
+    B->>API: GET /portfolios
     API-->>B: 401 «Токен недействителен или истёк»
     B->>API: POST /auth/refresh (cookie tendo_rt)
     API->>DB: ротация refresh, сдвиг срока простоя
     API-->>B: 200 {ok:true} + новые tendo_at, tendo_rt
-    B->>API: повтор GET /tenders
+    B->>API: повтор GET /portfolios
 ```
 
 ### 2.4. Второй фактор (MFA, TOTP)
@@ -365,8 +365,8 @@ sequenceDiagram
 
 | Выгрузка | Ручка | Тип | Имя файла | Описание |
 |---|---|---|---|---|
-| Сравнительная таблица | `GET /tenders/{id}/comparison/export` | xlsx | `<id>_sravnenie_<ГГГГ-ММ-ДД_ЧЧММ>.xlsx` | endpoints-tenders.md |
-| Протокол комиссии | `GET /tenders/{id}/protocol/export` | docx | формируется сервисом протокола | endpoints-tenders.md |
+| Сравнительная таблица | `GET /tenders/{id}/comparison/export` | xlsx | `<id>_sravnenie_<ГГГГ-ММ-ДД_ЧЧММ>.xlsx` (МСК) | [endpoints-tenders-comparison.md](endpoints-tenders-comparison.md#get-tenderstender_idcomparisonexport) |
+| Протокол комиссии | `GET /tenders/{id}/protocol/export` | docx | `<id>_protokol_<ГГГГ-ММ-ДД_ЧЧММ>.docx` (МСК) | [endpoints-tenders-comparison.md](endpoints-tenders-comparison.md#get-tenderstender_idprotocolexport) |
 | Отчёты | `GET/POST /reports/*.xlsx` | xlsx | по отчёту | [endpoints-reports.md](endpoints-reports.md) |
 | Журнал ИБ | `GET /security/events/export[.jsonl/.txt]` | csv / jsonl / txt | `security_events.<ext>` | [endpoints-security.md](endpoints-security.md) |
 | Пакет уведомления РКН | ручки раздела ИБ | json | `rkn_incident_<id>_v<версия>.json` | [endpoints-security.md](endpoints-security.md) |

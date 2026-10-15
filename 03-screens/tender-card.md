@@ -2,7 +2,7 @@
 
 Главный рабочий экран тендерного специалиста: шапка тендера, переключатель статуса, семь вкладок-разделов, правая панель «Анализ ИИ» и общие окна жизненного цикла. Этот файл — обзор экрана и оглавление подфайлов по вкладкам.
 
-Связанные разделы: бизнес-логика сравнения — [../02-business-logic/tenders-comparison.md](../02-business-logic/tenders-comparison.md); API — [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md), [../04-api/endpoints-rounds.md](../04-api/endpoints-rounds.md), [../04-api/endpoints-quotes.md](../04-api/endpoints-quotes.md), [../04-api/endpoints-comments.md](../04-api/endpoints-comments.md), [../04-api/endpoints-chat.md](../04-api/endpoints-chat.md); данные — [../05-data-model/tables.md#tenders](../05-data-model/tables.md#tenders); ИИ — [../06-ai/](../06-ai/).
+Связанные разделы: бизнес-логика сравнения — [../02-business-logic/tenders-comparison.md](../02-business-logic/tenders-comparison.md); API — [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md), [../04-api/endpoints-tenders-comparison.md](../04-api/endpoints-tenders-comparison.md), [../04-api/endpoints-tenders-analysis.md](../04-api/endpoints-tenders-analysis.md), [../04-api/endpoints-rounds.md](../04-api/endpoints-rounds.md), [../04-api/endpoints-quotes.md](../04-api/endpoints-quotes.md), [../04-api/endpoints-comments.md](../04-api/endpoints-comments.md), [../04-api/endpoints-chat.md](../04-api/endpoints-chat.md); данные — [../05-data-model/tables.md#tenders](../05-data-model/tables.md#tenders); ИИ — [../06-ai/](../06-ai/).
 
 ## Оглавление подфайлов
 

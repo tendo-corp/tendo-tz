@@ -2,7 +2,7 @@
 
 Библиотека готовых составов ФКП, сгруппированных по видам работ: список шаблонов, конструктор шаблона (создание и правка, в том числе из Excel-файла), удаление и запуск нового тендера по шаблону.
 
-Связанные разделы: правила шаблонов — [../02-business-logic/tenders-lifecycle.md](../02-business-logic/tenders-lifecycle.md#4-шаблоны-тендеров); API — [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md) (группа `templates`: `GET/POST /templates`, `PUT/DELETE /templates/{id}`, `POST /templates/from-tender/{id}`, `PATCH /templates/{id}/column-map`; разбор файла — `POST /tenders/parse-excel`); запуск тендера по шаблону — [tender-create.md](tender-create.md#создание-из-шаблона); «Сохранить как шаблон» из карточки тендера — [tender-card-lifecycle.md](tender-card-lifecycle.md#сохранить-как-шаблон); виды работ и единицы — [../04-api/endpoints-catalog.md](../04-api/endpoints-catalog.md).
+Связанные разделы: правила шаблонов — [../02-business-logic/tenders-lifecycle.md](../02-business-logic/tenders-lifecycle.md#4-шаблоны-тендеров); API — [../04-api/endpoints-tenders-templates.md](../04-api/endpoints-tenders-templates.md) (группа `templates`: `GET/POST /templates`, `PUT/DELETE /templates/{id}`, `POST /templates/from-tender/{id}`, `PATCH /templates/{id}/column-map`; разбор файла — `POST /tenders/parse-excel`); запуск тендера по шаблону — [tender-create.md](tender-create.md#создание-из-шаблона); «Сохранить как шаблон» из карточки тендера — [tender-card-lifecycle.md](tender-card-lifecycle.md#сохранить-как-шаблон); виды работ и единицы — [../04-api/endpoints-catalog.md](../04-api/endpoints-catalog.md).
 
 > Круглый значок в правом нижнем углу снимков — инструмент отладки dev-сборки стенда, в продукт не входит.
 

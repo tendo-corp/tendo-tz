@@ -2,7 +2,7 @@
 
 Пакет документов тендера, который видят приглашённые контрагенты вместе с формой КП (ссылка на рабочую документацию, техническое задание, шаблоны договоров, шаблон ФКП), и окно «Тендерный протокол» с выгрузкой в Word (.docx), доступное с любой вкладки.
 
-Связанные разделы: обзор экрана — [tender-card.md](tender-card.md); форма КП поставщика (где пакет виден контрагенту) — экраны поставщика в [03-screens](./); API — [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md) (`/documents`, `/protocol`, `/protocol/export`), файлы — [../04-api/](../04-api/) (загрузка/скачивание вложений); хранилище — [../07-architecture/](../07-architecture/); данные — [../05-data-model/tables.md#tenders](../05-data-model/tables.md#tenders) (`attachments`, `tender_protocols`).
+Связанные разделы: обзор экрана — [tender-card.md](tender-card.md); форма КП поставщика (где пакет виден контрагенту) — экраны поставщика в [03-screens](./); API — [../04-api/endpoints-rounds.md](../04-api/endpoints-rounds.md#get-tenderstender_iddocuments) (`/documents`), [../04-api/endpoints-tenders-comparison.md](../04-api/endpoints-tenders-comparison.md#get-tenderstender_idprotocol) (`/protocol`, `/protocol/export`), файлы — [../04-api/](../04-api/) (загрузка/скачивание вложений); хранилище — [../07-architecture/](../07-architecture/); данные — [../05-data-model/tables.md#tenders](../05-data-model/tables.md#tenders) (`attachments`, `tender_protocols`).
 
 ## Маршрут, роли, как попасть
 

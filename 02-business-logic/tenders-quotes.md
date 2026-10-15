@@ -2,7 +2,7 @@
 
 Как поставщик заполняет форму КП (ставки материалов и работ, объём, стоимость), какие корректировки он может предложить, как подтверждается НДС, как считается «заполнено», что проверяется при подаче и повторной подаче, как работает загрузка заполненного Excel-файла КП, и что делает с КП тендерный специалист: входящие, карточка, решения.
 
-Связанные разделы: индекс — [tenders.md](tenders.md); приглашения и черновик формы — [tenders-invitations.md](tenders-invitations.md); как КП попадают в сравнение — [tenders-comparison.md](tenders-comparison.md); раунды — [tenders-rounds.md](tenders-rounds.md); комментарии к позициям — [comments.md](comments.md); данные — [../05-data-model/tables.md](../05-data-model/tables.md#quotes); API — [../04-api/endpoints-quotes.md](../04-api/endpoints-quotes.md), [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md); экраны — [../03-screens/fill.md](../03-screens/fill.md), [../03-screens/quotes-inbox.md](../03-screens/quotes-inbox.md), [../03-screens/quote-card.md](../03-screens/quote-card.md), [../03-screens/cabinet.md](../03-screens/cabinet.md), [../03-screens/tender-card.md](../03-screens/tender-card.md).
+Связанные разделы: индекс — [tenders.md](tenders.md); приглашения и черновик формы — [tenders-invitations.md](tenders-invitations.md); как КП попадают в сравнение — [tenders-comparison.md](tenders-comparison.md); раунды — [tenders-rounds.md](tenders-rounds.md); комментарии к позициям — [comments.md](comments.md); данные — [../05-data-model/tables.md](../05-data-model/tables.md#quotes); API — [../04-api/endpoints-quotes.md](../04-api/endpoints-quotes.md), [../04-api/endpoints-tenders-invite.md](../04-api/endpoints-tenders-invite.md) (заполнение и подача по ссылке), [../04-api/endpoints-tenders-comparison.md](../04-api/endpoints-tenders-comparison.md) (корректировки, версии, доработка); экраны — [../03-screens/fill.md](../03-screens/fill.md), [../03-screens/quotes-inbox.md](../03-screens/quotes-inbox.md), [../03-screens/quote-card.md](../03-screens/quote-card.md), [../03-screens/cabinet.md](../03-screens/cabinet.md), [../03-screens/tender-card.md](../03-screens/tender-card.md).
 
 Оценка: **L** (форма поставщика с автосохранением и проверками — M; корректировки и решения с построчным дозаполнением — M; импорт Excel-файла КП — M, опирается на разборщик ФКП; входящие и карточка КП — S–M).
 
@@ -141,7 +141,7 @@ P — число позиций, по которым названа цена
 - Ставка — настройка `VAT_RATE_PCT` (по умолчанию **22**); подставляется в форму, письма, справку.
 - При **каждой** подаче (включая переподачу) поставщик ставит флажок «Цены указаны с НДС 22 %»; галочка не наследуется из прошлой версии. Без флажка — 400 «Подтвердите, что цены указаны с НДС 22%».
 - В версии КП сохраняются время подтверждения и ставка. В ленту и в СТ — «подтверждено с НДС 22 %».
-- Выделение НДС из суммы (в Excel «в т.ч. НДС» и в протоколе): `НДС = round₂(Сумма × 22 / 122)`.
+- Выделение НДС из суммы (в Excel «в т.ч. НДС» и в протоколе): `НДС = round₂(Сумма × 22 / 122)`. В работающей системе ставка выгрузки СТ и протокола — константа 22, не связанная с `VAT_RATE_PCT`; при воссоздании система должна брать её из той же настройки, что и форма подачи.
 
 ## 8. Подача КП
 

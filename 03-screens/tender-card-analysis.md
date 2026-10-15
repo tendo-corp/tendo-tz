@@ -2,7 +2,7 @@
 
 Правая панель карточки тендера с ИИ-разбором сравнения КП: запуск → «разбор идёт» → результат; разбор пары отмеченных подрядчиков; чат «Спросить по таблице» с действиями над таблицей; черновик письма поставщику. Описан интерфейс; пайплайны, промпты, верификация чисел и биллинг токенов — в [../06-ai/](../06-ai/).
 
-Связанные разделы: обзор экрана — [tender-card.md](tender-card.md); переходы «анализ → таблица» — [tender-card-comparison.md](tender-card-comparison.md); чаты с контрагентами — [tender-card-messages.md](tender-card-messages.md); API ИИ — [../04-api/endpoints-tenders.md](../04-api/endpoints-tenders.md) (`/tenders/{id}/insights/*`), ИИ-слой — [../06-ai/](../06-ai/).
+Связанные разделы: обзор экрана — [tender-card.md](tender-card.md); переходы «анализ → таблица» — [tender-card-comparison.md](tender-card-comparison.md); чаты с контрагентами — [tender-card-messages.md](tender-card-messages.md); API ИИ — [../04-api/endpoints-tenders-analysis.md](../04-api/endpoints-tenders-analysis.md) (`/tenders/{id}/insights/*`), ИИ-слой — [../06-ai/](../06-ai/).
 
 ## Маршрут, роли, как попасть
 
