@@ -395,8 +395,16 @@ sequenceDiagram
 | [endpoints-notifications.md](endpoints-notifications.md) | notifications (5) | 5 |
 | [endpoints-files.md](endpoints-files.md) | files (9) | 9 |
 | [endpoints-system.md](endpoints-system.md) | без тега (3) | 3 |
-| [endpoints-suppliers.md](endpoints-suppliers.md) | suppliers (47), supplier-contacts (4), supplier-cabinet (5) | 56 |
-| [endpoints-tenders.md](endpoints-tenders.md) | tenders (64), creation-drafts (7), templates (6) | 77 |
+| [endpoints-suppliers.md](endpoints-suppliers.md) — реестр, карточка, статусы, контакты, пользователи ЛК, корзина | suppliers, supplier-contacts | 39 |
+| [endpoints-suppliers-registration.md](endpoints-suppliers-registration.md) — ссылки на анкету, анкета, кабинет `/me/*` | suppliers, supplier-cabinet (5) | 17 |
+| | *итого контрагенты: suppliers (47), supplier-contacts (4), supplier-cabinet (5)* | *56* |
+| [endpoints-tenders.md](endpoints-tenders.md) — карточка, создание, правка, состав ФКП, лента, приглашения; оглавление группы | tenders | 14 |
+| [endpoints-tenders-import.md](endpoints-tenders-import.md) — распознавание Excel, черновики мастера | tenders, creation-drafts (7) | 13 |
+| [endpoints-tenders-templates.md](endpoints-tenders-templates.md) — шаблоны тендеров | templates (6) | 6 |
+| [endpoints-tenders-comparison.md](endpoints-tenders-comparison.md) — СТ и выгрузка, протокол, версии КП, корректировки, комментарии | tenders | 14 |
+| [endpoints-tenders-analysis.md](endpoints-tenders-analysis.md) — ИИ-анализ `/tenders/{id}/insights*` | tenders | 15 |
+| [endpoints-tenders-invite.md](endpoints-tenders-invite.md) — форма КП по персональной ссылке `/invite/{token}*` | tenders | 15 |
+| | *итого тендеры: tenders (64), creation-drafts (7), templates (6)* | *77* |
 | [endpoints-rounds.md](endpoints-rounds.md) | rounds (13) | 13 |
 | [endpoints-quotes.md](endpoints-quotes.md) | quotes (8) | 8 |
 | [endpoints-chat.md](endpoints-chat.md) | chats (22) | 22 |

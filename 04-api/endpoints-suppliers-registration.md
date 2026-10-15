@@ -56,10 +56,10 @@ sequenceDiagram
     API-->>C: {items, require_work_experience}
     Note over C: 5 шагов мастера: организация и выручка → виды работ и опыт → контакты → документы (файлы держит браузер) → согласие на ПДн и пароль ЛК
     C->>API: POST /suppliers/register {invite_token, org, workTypes, contacts, docSlots, revenues, workExperience, pdnConsent, password?}
-    API->>API: honeypot; токен; все поля разом (400 fieldErrors)
+    API->>API: honeypot, токен, все поля разом (400 fieldErrors)
     API->>DB: supplier (status new), контакты (согласие ПДн + редакция), виды работ, опыт, выручка
     API->>DB: пользователь role=supplier + связка ЛК
-    API->>DB: приглашение used (single) / use_count+1 (multi); журнал supplier_registered; уведомление «Новая анкета контрагента»
+    API->>DB: приглашение used (single) / use_count+1 (multi), журнал supplier_registered, уведомление «Новая анкета контрагента»
     API->>Q: задание supplier_notification (письмо держателям suppliers.manage)
     API-->>C: 201 {item, cabinet:{created, email, password?}}
     loop по каждому выбранному файлу

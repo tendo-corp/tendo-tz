@@ -82,7 +82,7 @@ sequenceDiagram
             W->>API: GET …/insights/run?job_id=…
             API-->>W: {state:"failed", error:"…"} → кнопка «Повторить»
         else
-            J->>DB: ai_analysis_results (sections, structure, answers; valid|partial) + списание токенов
+            J->>DB: ai_analysis_results (sections, structure, answers, valid|partial) + списание токенов
             J->>DB: done {result_id, degraded}
             W->>API: GET …/insights/run?job_id=…
             API-->>W: {state:"done", result_id}

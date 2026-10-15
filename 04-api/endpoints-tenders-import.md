@@ -67,7 +67,7 @@ sequenceDiagram
     opt эвристика пуста и ИИ включён
         J->>AI: доразбор структуры
     end
-    J->>DB: единицы → справочник; done + result (или failed + error)
+    J->>DB: единицы → справочник, done + result (или failed + error)
     loop каждые 1,5 с, до 6 мин
         W->>API: GET /tenders/parse-excel/jobs/{job_id}
         API-->>W: {status:"queued"|"running"} … {status:"done", sections, sections_tree, column_map, condition_fields, parse_warnings, unknown_units, unit_review}
@@ -82,7 +82,7 @@ sequenceDiagram
     W->>API: PUT /creation-drafts/{id} {current_step:2, header, structure} (автосохранение)
     U->>W: «Создать тендер»
     W->>API: POST /tenders {project_id, title, work_type_ids, budget_position_id, start_date, end_date, sections, condition_fields, draft_id, template_id?}
-    API->>DB: тендер (draft), разделы, позиции, условия; номер T-ГГГГ-NNN
+    API->>DB: тендер (draft), разделы, позиции, условия, номер T-ГГГГ-NNN
     API->>DB: черновик → converted, исходник → документ «Шаблон ФКП» тендера
     API-->>W: 201 {item: карточка тендера}
     opt тендер из шаблона, карта колонок подтверждена
@@ -165,7 +165,7 @@ sequenceDiagram
 
 **Ошибки.** 413; 422 — нет `file`. Ошибки содержимого файла сюда не приходят — они в статусе задания.
 
-**Пример.** `file=ФКП.xlsx, sheet=Отделка паркинга, file_hash=9f2c…` → `{"job_id": "f80ae0c6-39b0-49a6-a35a-c2968c5f5c1a", "status": "queued", "deduped": false}`
+**Пример.** `file=ФКП.xlsx, sheet=Отделка паркинга, file_hash=9f2c…` → `{"job_id": "f80ae0c6-…", "status": "queued", "deduped": false}`
 
 **Побочные эффекты.** Файл сохраняется вложением черновика (если у черновика уже есть файл с тем же хешем — ничего не делается; одинаковые байты на диск повторно не пишутся — переиспользуется уже сохранённый файл с тем же SHA-256), черновик ссылается на это вложение; строка `background_jobs` (`job_type = parse_excel`, `input_meta`: `filename`, `file_size`, `sheet`, `content_type`, `parser_version`, `file_hash`) и файл задания во временном хранилище.
 
