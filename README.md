@@ -16,7 +16,7 @@
 
 | Кто читает | С чего начать | Затем |
 |---|---|---|
-| Оценщик, руководитель проекта | [01-product/vision.md](01-product/vision.md) → [01-product/scope-and-mvp.md](01-product/scope-and-mvp.md) → [09-estimation/work-breakdown.md](09-estimation/work-breakdown.md) → [09-estimation/complexity-map.md](09-estimation/complexity-map.md) | [99-open-questions.md](99-open-questions.md): вопросы с пометкой «влияет на оценку» закрыть до фиксации цены |
+| Оценщик, руководитель проекта | [09-estimation/estimate-request.md](09-estimation/estimate-request.md) → [01-product/vision.md](01-product/vision.md) → [01-product/scope-and-mvp.md](01-product/scope-and-mvp.md) → [09-estimation/work-breakdown.md](09-estimation/work-breakdown.md) → [09-estimation/complexity-map.md](09-estimation/complexity-map.md) | [99-open-questions.md](99-open-questions.md): вопросы с пометкой «влияет на оценку» закрыть до фиксации цены |
 | Аналитик, тестировщик | [01-product/glossary.md](01-product/glossary.md) → [01-product/users-and-roles.md](01-product/users-and-roles.md) → [02-business-logic/end-to-end-scenarios.md](02-business-logic/end-to-end-scenarios.md) | доменные файлы [02-business-logic](02-business-logic/tenders.md) |
 | Бэкенд-разработчик | [07-architecture/architecture.md](07-architecture/architecture.md) → [04-api/overview.md](04-api/overview.md) → [05-data-model/erd.md](05-data-model/erd.md) | доменные файлы 02, ручки 04, таблицы 05, ИИ 06, безопасность 07 |
 | Фронтенд-разработчик | [03-screens/screen-map.md](03-screens/screen-map.md) → [03-screens/shell.md](03-screens/shell.md) → экраны | правила из 02, ручки из 04 |
